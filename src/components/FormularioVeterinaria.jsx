@@ -21,10 +21,10 @@ const FormularioVeterinaria = () => {
             <Card>
             <Card.Header>Llenar el formulario para crear una cita </Card.Header>
               <Card.Body className="p-0" >
-                <Card.Text className="contenedorForm" >
-                  <Form.Group className="mb-2 ps-3 pe-5  d-flex flex-row">
-                    <Form.Label className="col-4">
-                      Nombre de Mascota{" "}
+                <Card.Text className="contenedorForm " >
+                  <Form.Group className="mb-2 ps-3 pe-5  d-flex flex-row ">
+                    <Form.Label className="col-4 align-self-center">
+                      Nombre de Mascota:
                     </Form.Label>
                     <Form.Control
                       type="text"
@@ -35,7 +35,7 @@ const FormularioVeterinaria = () => {
                     />
                   </Form.Group>
                   <Form.Group className="mb-2 ps-3 pe-5 d-flex flex-row">
-                    <Form.Label className="col-4">Nombre dueño</Form.Label>
+                    <Form.Label className="col-4 align-self-center">Nombre dueño:</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="ingrese el nombre del dueño"
@@ -45,7 +45,7 @@ const FormularioVeterinaria = () => {
                     />
                   </Form.Group>
                   <Form.Group className="mb-2 ps-3 pe-5  d-flex flex-row  text-center">
-                    <Form.Label className="col-4 text-start">fecha</Form.Label>
+                    <Form.Label className="col-4 text-start align-self-center">Fecha:</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="ej: 25/05/2023"
@@ -54,16 +54,17 @@ const FormularioVeterinaria = () => {
                       className="w-25"
                     />
 
-                    <Form.Label className="col-2">hora</Form.Label>
+                    <Form.Label className="col-2 align-self-center">Hora:</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="hh:mm"
                       onChange={(e) => setHora(e.target.value)}
                       value={hora}
+                      className="w-25"
                     />
                   </Form.Group>
                   <Form.Group className=" ps-3 pe-5  d-flex flex-row">
-                    <Form.Label className="col-4">Sintomas: </Form.Label>
+                    <Form.Label className="col-4 align-self-center">Sintomas: </Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="describir los sintomas"
