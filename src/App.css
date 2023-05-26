@@ -1,10 +1,33 @@
 .contenedorForm{
     padding: 0px;
     margin: 0px;
-   background: rgb(148, 203, 227);
-
+    background: rgb(148, 203, 227);
 }
 .botonEnviar{
     padding: 20px;
 
+}
+.contenedorCitaItem{
+    width: 320px;
+    background: red;
+
+}
+
+.contenedorDatos{
+    background: rgb(148, 203, 227);
+    padding: 0px;
+    margin: 0px;
+    height: 150px;
+    font-size: 20px;
+}
+.txtDatos{
+    background: rgb(255, 255, 255);
+    width: 150px;
+    height:35px;
+    margin-left: 20px;
+    padding: 0px;
+}
+.circuloTitulo{
+    width: 40px;
+    height: 40px;
 }
