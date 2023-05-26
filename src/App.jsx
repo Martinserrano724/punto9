@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <FormularioVeterinaria></FormularioVeterinaria>
+      <FormularioVeterinaria className=""></FormularioVeterinaria>
     </>
   )
 }

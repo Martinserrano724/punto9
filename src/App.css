@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.body{
+    background: rgb(235,141,212);
+background: linear-gradient(90deg, rgba(235,141,212,1) 20%, rgba(250,129,132,1) 80%);
+}
+.contenedorForm{
+    padding: 0px;
+    margin: 0px;
+    background: rgb(148, 203, 227);
+}
+
+.contenedorDatos {
+    background: rgb(148, 203, 227);
+    padding: 0px;
+    margin: 0px;
+    height: 150px;
+    font-size: 20px;
+}
+.txtDatos{
+    background: rgb(255, 255, 255);
+    width: 200px;
+    height:35px;
+    margin-left: 20px;
+    padding: 0px;
+}
+.circuloTitulo{
+    width: 40px;
+    height: 40px;
+}
+.btnEliminar{
+    display: flex;
+    justify-content: end;
+}
