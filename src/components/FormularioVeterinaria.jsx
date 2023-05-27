@@ -72,13 +72,14 @@ const FormularioVeterinaria = () => {
     if (!valicacionTextoInput(nombreDuenio)) {
       validacion += "ERROR Nombre Dueño incorrecto \n ";
     }
-    if (!fecha>='25/05/2023') {
+    if (fecha =='') {
       validacion += "ERROR fecha incorrecto \n ";
     }
     if (!valicacionTextoInput(sintomas)) {
       validacion += "ERROR mail incorrecto \n";
     }
-    if (hora>8 && hora<17){
+    if (hora<=8  && hora >=17){
+     { console.log(hora);}
       validacion += "ERROR Hora incorrecto \n horario de atencion: de 08 a 17 \n";
     }
 
@@ -90,12 +91,12 @@ const FormularioVeterinaria = () => {
       <h2 className="text-center mb-4">
         Administrador pacientes de veterinaria
       </h2>
-      <div className="d-flex justify-content-center">
-        <Form onSubmit={handleSubmit} className="p-0">
+      <div className="d-flex justify-content-center ">
+        <Form onSubmit={handleSubmit} className="p-0 formContenedor">
           <Card>
             <Card.Header>Llenar el formulario para crear una cita </Card.Header>
             <Card.Body className="p-0">
-              <Card.Text className="contenedorForm ">
+              <div className="contenedorForm ">
                 <Form.Group className="mb-2 ps-3 pe-5  d-flex flex-row ">
                   <Form.Label className="col-4 align-self-center">
                     Nombre de Mascota:
@@ -143,7 +144,7 @@ const FormularioVeterinaria = () => {
                   </Form.Label>
                   <Form.Control
                     type="number"
-                    placeholder="hh:mm"
+                    placeholder="hh"
                     onChange={(e) => setHora(e.target.value)}
                     value={hora}
                     className="w-25"
@@ -165,7 +166,7 @@ const FormularioVeterinaria = () => {
                     required
                   />
                 </Form.Group>
-              </Card.Text>
+              </div>
               <Card.Footer className="d-flex justify-content-center">
                 <Button type="submit">Agregar Nueva Cita</Button>
               </Card.Footer>
@@ -173,7 +174,7 @@ const FormularioVeterinaria = () => {
           </Card>
         </Form>
       </div>
-      <hr />
+      <hr className="m-5"/>
       <h3 className="text-center">Administra las citas Aqui</h3>
       <div className="">  <ListaVeterinaria citas={arrayCitas} eliminar={eliminarCita}></ListaVeterinaria></div>
     
