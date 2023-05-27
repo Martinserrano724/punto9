@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 const CitaVeterinaria = ({ cita ,eliminar,index}) => {
   return (
 
-      <Card className="contenedorCitaItem  col-md-4 col-lg-3 m-1">
+      <Card className="contenedorCitaItem  col-md-4 col-lg-3 m-1 ">
         
           <Card.Header className="cardTituloCita ps-3 m-0 ">
             <div className="d-flex d-row  ">
@@ -21,19 +21,20 @@ const CitaVeterinaria = ({ cita ,eliminar,index}) => {
             </div>
           </Card.Header>
           <Card.Body className="p-0 m-0 "> 
-          <Card.Text className="contenedorDatos w-100 row p-3 m-0 ">
+          <div className="contenedorDatos w-100 row p-3 m-0 ">
             <div className="p-0 m-0 d-flex d-row mb-2">
             <div className="col-4 fs-6  align-self-center ">Fecha: </div>
-             <div className="txtDatos ">{cita.fecha}</div>
+             <div className="txtDatos  w-50">{cita.fecha}</div>
             </div>
             <div className="p-0 m-0 d-flex d-row mb-2">
-              <div className="col-4 fs-6 align-self-center">Hora: </div><div className="txtDatos ">{cita.hora}</div>
+              <div className="col-4 fs-6 align-self-center  ">Hora: </div>
+              <div className="txtDatos w-50">{cita.hora}</div>
             </div>
             <div className="p-0 m-0 d-flex d-row mb-2">
-            <div className="col-4 fs-6 align-self-center">Sintomas: </div>
-              <div className="txtDatos ">{cita.sintomas}</div>
+            <div className="col-4 fs-6 align-self-center ">Sintomas: </div>
+              <div className="txtDatos w-50 ">{cita.sintomas}</div>
             </div>
-          </Card.Text>
+          </div>
         </Card.Body>
         <Card.Footer className=" m-0 btnEliminar">
         <Button className="primary " onClick={()=>eliminar(index)}>Eliminar</Button>
